@@ -4,6 +4,7 @@
   "description": "React JS Mentoring program",
   "main": "index.js",
   "scripts": {
+    "start": "node src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Romicusblr/react-mentoring/issues"
   },
-  "homepage": "https://github.com/Romicusblr/react-mentoring#readme"
+  "homepage": "https://github.com/Romicusblr/react-mentoring#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
