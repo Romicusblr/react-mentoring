@@ -10,10 +10,16 @@
         <div id="root"></div>
         <script type="text/babel">
             const Component1 = () => React.createElement("h1", null, "Hello World(Component1)");
+            class Component2 extends React.Component {
+                render() {
+                    return <h1>Hello World(Component2)</h1>;
+                }
+            }
 
             const App = () => (
                 <div>
                     <Component1 />
+                    <Component2 />
                 </div>
             )
             ReactDOM.render(
