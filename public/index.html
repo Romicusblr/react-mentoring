@@ -9,8 +9,15 @@
     <body>
         <div id="root"></div>
         <script type="text/babel">
+            const Component1 = () => React.createElement("h1", null, "Hello World(Component1)");
+
+            const App = () => (
+                <div>
+                    <Component1 />
+                </div>
+            )
             ReactDOM.render(
-                <h1>Hello World</h1>,
+                <App />,
                 document.getElementById("root")
             );
         </script>
