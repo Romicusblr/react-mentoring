@@ -6,6 +6,10 @@ module.exports = {
         filename: "main.js",
         path: path.resolve(__dirname, "public")
     },
+    devServer: {
+        contentBase: path.join(__dirname, "public"),
+        port: 8000
+    },
     module: {
         rules: [
             {
