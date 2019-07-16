@@ -1,14 +1,21 @@
 const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     entry: "./src/index.js",
     output: {
-        filename: "main.js",
-        path: path.resolve(__dirname, "../public")
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, "../build")
     },
+    plugins: [
+        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            title: 'React mentoring project'
+        })
+    ],
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.js$/,
                 exclude: /(node_modules)/,
                 use: {
@@ -20,9 +27,12 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [
-                    {loader: "style-loader"},
-                    {loader: "css-loader"}
+                use: [{
+                        loader: "style-loader"
+                    },
+                    {
+                        loader: "css-loader"
+                    }
                 ]
             },
             {
