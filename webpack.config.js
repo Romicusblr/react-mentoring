@@ -1,5 +1,4 @@
 module.exports = env => {
-    const mode = Object.keys(env)[0] || "dev";
-    const configPath = `./webpack/webpack.${mode}.js`;
-    return require(configPath);
+    const mode = env.prod ? "prod" : "dev";
+    return require(`./webpack/webpack.${mode}.js`);
 }
