@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "webpack-dev-server",
+    "dev": "webpack-dev-server --env.dev",
     "build": "webpack --env.prod",
     "test": "jest"
   },
@@ -43,6 +43,7 @@
     "url-loader": "^2.0.1",
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.7.2",
+    "webpack-merge": "^4.2.1"
   }
 }
