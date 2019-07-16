@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
 
 const Component1 = () => React.createElement("h2", null, "Hello World(Component1)");
 class Component2 extends React.Component {
