@@ -14,10 +14,10 @@
   "author": "Raman Mastyka",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --env.production",
-    "dev": "NODE_ENV=development node src/server.js",
-    "start": "NODE_ENV=production node src/server.js",
-    "test": "jest"
+    "build": "webpack --config webpack/webpack.production.js",
+    "start": "NODE_ENV=development node src/server.js",
+    "prod": "NODE_ENV=production node src/server.js",
+    "test": "NODE_ENV=test jest"
   },
   "dependencies": {
     "express": "^4.17.1",
