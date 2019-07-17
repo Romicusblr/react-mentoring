@@ -8,6 +8,7 @@ class Component2 extends React.Component {
         return <h2>Hello World(Component2)</h2>;
     }
 }
+
 class Component3 extends React.PureComponent {
     render() {
         return <h2>Hello World(Component3)</h2>;
@@ -26,3 +27,7 @@ ReactDOM.render(
     <App />,
     document.querySelector("body")
 );
+
+if (module.hot) {
+    module.hot.accept();
+}

@@ -14,9 +14,9 @@
   "author": "Raman Mastyka",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --env.prod",
-    "dev": "webpack --env.dev",
-    "start": "node src/server.js",
+    "build": "webpack --env.production",
+    "dev": "NODE_ENV=development node src/server.js",
+    "start": "NODE_ENV=production node src/server.js",
     "test": "jest"
   },
   "dependencies": {
@@ -46,6 +46,8 @@
     "url-loader": "^2.0.1",
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.6",
+    "webpack-dev-middleware": "^3.7.0",
+    "webpack-hot-middleware": "^2.25.0",
     "webpack-merge": "^4.2.1"
   }
 }
