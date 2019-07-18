@@ -2,11 +2,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import style from './index.module.css';
 
 const Component1 = () => React.createElement('h2', null, 'Hello World(Component1)');
 class Component2 extends React.Component {
   render() {
-    return <h2>Hello World(Component2)</h2>;
+    return <h2 className={style.second}>Hello World(Component2)</h2>;
   }
 }
 
