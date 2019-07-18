@@ -32,12 +32,31 @@ module.exports = {
     },
     {
       test: /\.css$/,
+      exclude: /\.module\.css$/,
       use: [{
         loader: MiniCssExtractPlugin.loader,
         options: {
           hmr: process.env.NODE_ENV === 'development',
         },
       }, 'css-loader'],
+    },
+    {
+      test: /\.module\.css$/,
+      loader: [{
+        loader: MiniCssExtractPlugin.loader,
+        options: {
+          hmr: process.env.NODE_ENV === 'development',
+        },
+      },
+      {
+        loader: 'css-loader',
+        options: {
+          modules: true,
+          localIdentName: '[name]__[local]___[hash:base64:5]',
+          camelCase: true,
+        },
+      },
+      ],
     },
     {
       test: /\.(png|jpg)$/,
