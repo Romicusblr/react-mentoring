@@ -3,16 +3,19 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const BUILD_DIR = path.join(__dirname, '../build');
+const APP_DIR = path.join(__dirname, '../src');
+
 module.exports = {
-  entry: ['./src/index.jsx'],
+  entry: [`${APP_DIR}/index.jsx`],
   output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, '../build'),
+    filename: '[name].[hash].js',
+    path: BUILD_DIR,
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: 'src/index.html',
+      template: `${APP_DIR}/index.html`,
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
