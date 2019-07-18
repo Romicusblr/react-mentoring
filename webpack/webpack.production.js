@@ -10,7 +10,7 @@ module.exports = merge(common, {
     splitChunks: {
       cacheGroups: {
         vendor: {
-          test: /[\\/]node_modules[\\/](react|react-dom|react-router|react-redux)[\\/]/,
+          test: /[\\/]node_modules[\\/](react|react-dom|react-router|react-redux|prop-types)[\\/]/,
           name: 'vendor',
           chunks: 'all',
         },
