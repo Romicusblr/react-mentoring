@@ -13,7 +13,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'React mentoring project',
+      template: 'src/index.html',
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',

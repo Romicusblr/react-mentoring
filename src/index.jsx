@@ -26,7 +26,7 @@ const App = () => (
 
 ReactDOM.render(
   <App />,
-  document.querySelector('body'),
+  document.getElementById('root'),
 );
 
 if (module.hot) {
