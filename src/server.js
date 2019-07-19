@@ -1,10 +1,23 @@
-const express = require("express");
+/* eslint-disable global-require */
+const express = require('express');
+
 const app = express();
 const PORT = 8000;
-app.use(express.static("public"));
 
-const server = require("http").createServer(app);
+if (process.env.NODE_ENV === 'development') {
+  const webpack = require('webpack');
+  const webpackConfig = require('../webpack/webpack.development');
+  const compiler = webpack(webpackConfig);
+
+  app.use(require('webpack-dev-middleware')(compiler));
+  app.use(require('webpack-hot-middleware')(compiler));
+} else {
+  app.use(express.static('build'));
+}
+
+const server = require('http').createServer(app);
 
 server.listen(PORT, () => {
-    console.log("server is running on port %s", PORT);
+  // eslint-disable-next-line no-console
+  console.log('server is running on port %s', PORT);
 });
