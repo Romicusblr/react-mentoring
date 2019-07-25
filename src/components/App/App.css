@@ -3,6 +3,6 @@
 }
 
 body {
-  background-color: #545454;
+  background-color: var(--background-color);
   font-size: 16px;
 }

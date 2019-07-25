@@ -1,1 +1,7 @@
 @import "~normalize.css";
+
+:root {
+  --button-primary-color: #F65261;
+  --button-secondary-color: #484848;
+  --background-color: #545454;
+}
