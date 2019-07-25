@@ -1,9 +1,13 @@
 import React from 'react';
 import Button from '../Button';
+import SearchInput from '../SearchInput';
 import './App.css';
 
 const App = () => (
-  <Button />
+  <div>
+    <SearchInput />
+    <Button />
+  </div>
 );
 
 export default App;

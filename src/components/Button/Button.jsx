@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Button.css';
+import style from './style.module.css';
 
 function Button({ name }) {
-  return <button type="submit">{name}</button>;
+  return <button type="submit" className={style.button}>{name}</button>;
 }
 
 Button.propTypes = {
