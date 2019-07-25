@@ -54,7 +54,9 @@ module.exports = {
       {
         loader: 'css-loader',
         options: {
-          modules: true,
+          modules: {
+            localIdentName: process.env.NODE_ENV === 'development' ? '[folder]__[local]' : '[local]__[hash:base64:5]',
+          },
         },
       },
       ],
