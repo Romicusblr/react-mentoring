@@ -1,7 +1,9 @@
 .button {
   width: 235px;
   padding: 1rem;
-  background-color: var(--button-primary-color);
+  margin-left: .5rem;
+  background-color: var(--color-pink);
+  color: var(--color-white);
   text-transform: uppercase;
   border-radius: .25rem;
   border-color: transparent

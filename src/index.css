@@ -1,7 +1,16 @@
 @import "~normalize.css";
 
 :root {
-  --button-primary-color: #F65261;
-  --button-secondary-color: #484848;
+  --color-pink: #F65261;
+  --color-gray: #484848;
+  --color-white: #FFF;
   --background-color: #545454;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--color-white);
+  font-size: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
