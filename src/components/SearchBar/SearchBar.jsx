@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../Button';
 import SearchInput from '../SearchInput';
-import SearchFilter from '../SearchFilter';
+import RadioSwitch from '../RadioSwitch';
 import style from './style.module.css';
 
 const SearchBar = () => (
@@ -10,9 +10,15 @@ const SearchBar = () => (
       <SearchInput />
       <Button />
     </p>
-    <SearchFilter
+    <RadioSwitch
+      name="searchFilter"
       title="search by"
       options={[{ name: 'title', checked: true }, { name: 'genre' }]}
+    />
+    <RadioSwitch
+      name="sortFilter"
+      title="sort by"
+      options={[{ name: 'release date', checked: true }, { name: 'rating' }]}
     />
   </form>
 );
