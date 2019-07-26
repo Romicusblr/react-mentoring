@@ -1,0 +1,7 @@
+.logo {
+  color: var(--color-pink);
+  font-weight: 100;
+  &>strong {
+    font-weight: 900;
+  }
+}
