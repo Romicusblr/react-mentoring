@@ -6,26 +6,25 @@ import style from './style.module.css';
 function RadioSwitch({ name, title, options }) {
   const buttons = options.map((option) => {
     // FIXME: hardcoded id
-    const id = `${name}_${option}__${Math.random().toString().slice(2)}`;
+    const id = `${name}_${option.name}__${Math.random().toString().slice(2)}`;
     return (
-      <p>
+      <p key={id}>
         <input type="radio" name={name} id={id} defaultChecked={option.checked} />
         <label htmlFor={id}>{option.name}</label>
       </p>
     );
   });
   return (
-    <p className={style.radio}>
+    <div className={style.radio}>
       <span>{title}</span>
       {buttons}
-    </p>
+    </div>
   );
 }
-
 RadioSwitch.propTypes = {
   name: PropTypes.string,
   title: PropTypes.string,
-  options: PropTypes.arrayOf(PropTypes.string),
+  options: PropTypes.arrayOf(PropTypes.objectOf),
 };
 
 RadioSwitch.defaultProps = {
