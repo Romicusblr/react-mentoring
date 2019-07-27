@@ -28,19 +28,16 @@ function MovieCard({
 }
 
 MovieCard.propTypes = {
-  movieData: PropTypes.objectOf(PropTypes.string),
-  poster_path: PropTypes.string,
-  title: PropTypes.string,
-  genres: PropTypes.arrayOf(PropTypes.string),
-  release_date: PropTypes.string,
+  movieData: PropTypes.shape({
+    poster_path: PropTypes.string,
+    title: PropTypes.string,
+    genres: PropTypes.arrayOf(PropTypes.string),
+    release_date: PropTypes.string,
+  }),
 };
 
 MovieCard.defaultProps = {
   movieData: {},
-  poster_path: '',
-  title: '',
-  genres: [],
-  release_date: '',
 };
 
 export default MovieCard;
