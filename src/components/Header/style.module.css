@@ -4,6 +4,7 @@
   border: 1px solid red ;
   display: flex;
   flex-direction: column;
+  background-image: url('./bg.png');
 
   &>h1 {
     text-transform: uppercase;
