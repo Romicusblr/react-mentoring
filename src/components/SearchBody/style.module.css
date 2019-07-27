@@ -1,0 +1,7 @@
+.searchBody {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 3rem;
+  background-color: var(--color-lighter-black);
+}
