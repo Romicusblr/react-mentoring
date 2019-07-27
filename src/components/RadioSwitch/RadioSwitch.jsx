@@ -9,7 +9,7 @@ function RadioSwitch({ name, title, options }) {
     const id = `${name}_${option}__${Math.random().toString().slice(2)}`;
     return (
       <p>
-        <input type="radio" name={name} id={id} checked={option.checked} />
+        <input type="radio" name={name} id={id} defaultChecked={option.checked} />
         <label htmlFor={id}>{option.name}</label>
       </p>
     );
