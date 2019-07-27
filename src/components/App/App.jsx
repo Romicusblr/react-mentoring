@@ -5,10 +5,10 @@ import './App.css';
 import data from '../fakeMovies';
 
 const App = () => (
-  <div>
+  <React.Fragment>
     <Header />
     <SearchBody data={data.data} />
-  </div>
+  </React.Fragment>
 );
 
 export default App;
