@@ -9,7 +9,6 @@ const Header = () => (
     <Logo />
     <h1>find your movie</h1>
     <SearchBar />
-    <ResultCounter />
   </header>
 );
 

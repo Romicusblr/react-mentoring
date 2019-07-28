@@ -15,11 +15,6 @@ const SearchBar = () => (
       title="search by"
       options={[{ name: 'title', checked: true }, { name: 'genre' }]}
     />
-    <RadioSwitch
-      name="sortFilter"
-      title="sort by"
-      options={[{ name: 'release date', checked: true }, { name: 'rating' }]}
-    />
   </form>
 );
 
