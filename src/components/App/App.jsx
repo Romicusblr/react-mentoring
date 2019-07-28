@@ -8,7 +8,7 @@ import fakeData from '../fakeMovies';
 const App = () => (
   <React.Fragment>
     <Header />
-    <Main data={fakeData.data} />
+    <Main data={fakeData} />
     <Footer />
   </React.Fragment>
 );

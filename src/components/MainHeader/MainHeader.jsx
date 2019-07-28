@@ -1,11 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ResultCounter from '../ResultCounter';
 import RadioSwitch from '../RadioSwitch';
 import style from './style.module.css';
 
-const MainHeader = () => (
+
+const MainHeader = ({ quantity }) => (
   <header className={style.mainHeader}>
-    <ResultCounter />
+    <ResultCounter quantity={quantity} />
     <RadioSwitch
       name="sortFilter"
       title="sort by"
@@ -13,5 +15,13 @@ const MainHeader = () => (
     />
   </header>
 );
+
+MainHeader.propTypes = {
+  quantity: PropTypes.number,
+};
+
+MainHeader.defaultProps = {
+  quantity: 0,
+};
 
 export default MainHeader;
