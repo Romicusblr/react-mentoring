@@ -1,0 +1,13 @@
+import React from 'react';
+import SearchBody from '../SearchBody';
+import MainHeader from '../MainHeader';
+import style from './style.module.css';
+
+const Main = ({ data }) => (
+  <main className={style.main}>
+    <MainHeader />
+    <SearchBody data={data} />
+  </main>
+);
+
+export default Main;
