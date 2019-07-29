@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  padding: var(--padding-header);
+  padding: 5rem var(--padding-header);
   display: flex;
   flex-direction: column;
   background-image: url('./bg.png');
