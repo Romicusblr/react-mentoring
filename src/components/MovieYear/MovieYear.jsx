@@ -11,7 +11,7 @@ MovieYear.propTypes = {
 };
 
 MovieYear.defaultProps = {
-  year: '',
+  year: 0,
 };
 
 export default MovieYear;
