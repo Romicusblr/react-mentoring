@@ -1,0 +1,20 @@
+.movieDetails {
+  margin: 0;
+  display: flex;
+  &>img {
+    width: 17.5rem;
+  }
+  &>figcaption {
+    margin-left: 3.75rem;
+    &>h2 {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      &>p {
+        margin: 0;
+        margin-right: .5rem;
+      }
+    }
+  }
+
+}

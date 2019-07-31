@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import style from './style.module.css';
 
 function MovieTitle({ title }) {
-  return <h3 className={style.movieTitle}>{title}</h3>;
+  return <p className={style.movieTitle}>{title}</p>;
 }
 
 MovieTitle.propTypes = {
