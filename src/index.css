@@ -1,20 +1,19 @@
 @import "~normalize.css";
 
 :root {
-  --color-pink: #F65261;
-  --color-darker-gray: #373737;
-  --color-gray: #5C5C5C;
-  --color-lighter-gray: #BDBDBD;
+  --color-raised: #F65261;
+  --color-text-main: var(--color-white);
+  --color-text-secondary: #BDBDBD;
+  --color-text-other: #919191;
   --color-white: #FFF;
-  --color-black: #000;
-  --color-lighter-black: #242424;
-  --color-rating: #7FB859;
-  --background-color: #555;
+  --color-primary: #232323;
+  --color-rating: #A1E66F;
+  --color-bg: #555;
   --padding-header: 3.75rem;
 }
 
 body {
-  background-color: var(--background-color);
+  background-color: var(--color-bg);
   color: var(--color-white);
   font-size: 16px;
   max-width: 1200px;

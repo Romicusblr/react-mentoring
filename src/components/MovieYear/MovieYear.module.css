@@ -1,6 +1,6 @@
 .movieYear {
-    border: 1px solid var(--color-gray);
+    border: 1px solid var(--color-secondary);
     padding: .25rem .5rem;
     border-radius: .25rem;
-    color: var(--color-lighter-gray);
+    color: var(--color-text-secondary);
 }
