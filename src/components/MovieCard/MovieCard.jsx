@@ -6,7 +6,7 @@ import MovieTitle from '../MovieTitle';
 import MovieGenre from '../MovieGenre';
 import MovieYear from '../MovieYear';
 
-import style from './style.module.css';
+import style from './MovieCard.module.css';
 
 function MovieCard({
   movieData: {

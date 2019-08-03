@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from './style.module.css';
+import style from './MovieRating.module.css';
 
 function MovieRating({ rating }) {
   return <span className={style.movieRating}>{rating.toFixed(1)}</span>;

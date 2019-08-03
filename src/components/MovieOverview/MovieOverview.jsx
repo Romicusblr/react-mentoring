@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from './style.module.css';
+import style from './MovieOverview.module.css';
 
 function MovieOverview({ text }) {
   return <p className={style.movieOverview}>{text}</p>;

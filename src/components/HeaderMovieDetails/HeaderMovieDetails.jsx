@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../Logo';
-import style from './style.module.css';
+import style from './HeaderMovieDetails.module.css';
 import MovieDetails from '../MovieDetails';
 import { data } from '../fakeMovies';
 

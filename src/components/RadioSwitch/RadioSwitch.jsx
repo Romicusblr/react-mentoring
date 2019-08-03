@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-for */
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from './style.module.css';
+import style from './RadioSwitch.module.css';
 
 function RadioSwitch({ name, title, options }) {
   const buttons = options.map((option) => {

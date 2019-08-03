@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from './style.module.css';
+import style from './SearchInput.module.css';
 
 function SearchInput({ placeholder }) {
   return <input type="text" placeholder={placeholder} className={style.input} />;

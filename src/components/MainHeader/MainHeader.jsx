@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ResultCounter from '../ResultCounter';
 import RadioSwitch from '../RadioSwitch';
-import style from './style.module.css';
+import style from './MainHeader.module.css';
 
 
 const MainHeader = ({ quantity }) => (

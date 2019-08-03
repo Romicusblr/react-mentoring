@@ -8,7 +8,7 @@ import MovieOverview from '../MovieOverview';
 import MovieRating from '../MovieRating';
 import MovieGenre from '../MovieGenre';
 
-import style from './style.module.css';
+import style from './MovieDetails.module.css';
 
 function MovieDetails({
   movie: {

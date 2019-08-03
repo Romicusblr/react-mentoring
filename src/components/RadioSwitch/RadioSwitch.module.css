@@ -14,7 +14,7 @@
     &>input {
       appearance: none;
       &:checked + label {
-        background-color: var(--color-pink);
+        background-color: var(--color-raised);
       }
     }
 

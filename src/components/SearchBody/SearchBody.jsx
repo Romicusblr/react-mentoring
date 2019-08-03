@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MovieCard from '../MovieCard';
-import style from './style.module.css';
+import style from './SearchBody.module.css';
 
 const SearchBody = ({ data }) => (
   <main className={style.searchBody}>
