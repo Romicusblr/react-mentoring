@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import MovieImg from '../MovieImg';
 import MovieTitle from '../MovieTitle';
-import MovieYearDuration from '../MovieYearDuration';
+import LabelRaised from '../LabelRaised';
 import MovieOverview from '../MovieOverview';
 import MovieRating from '../MovieRating';
 import MovieGenre from '../MovieGenre';
@@ -24,7 +24,8 @@ function MovieDetails({
           <MovieRating rating={vote_average} />
         </h2>
         <MovieGenre genres={genres} />
-        <MovieYearDuration year={new Date(release_date).getFullYear()} duration={runtime} />
+        <LabelRaised>{new Date(release_date).getFullYear()}</LabelRaised>
+        <LabelRaised>{`${runtime} min`}</LabelRaised>
         <MovieOverview text={overview} />
       </figcaption>
     </figure>
