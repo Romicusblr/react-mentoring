@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import LabelRaised from '../LabelRaised';
 import Rating from '../Rating';
-import MovieGenre from '../MovieGenre';
+import List from '../List';
 
 import style from './MovieDetails.module.css';
 
@@ -24,7 +24,7 @@ function MovieDetails({
           <LabelRaised>{new Date(release_date).getFullYear()}</LabelRaised>
           <LabelRaised>{`${runtime} min`}</LabelRaised>
         </p>
-        <MovieGenre genres={genres} />
+        <List genres={genres} visibleGenres={2} delimeter=" &amp; " />
         <p>{overview}</p>
       </figcaption>
     </figure>
