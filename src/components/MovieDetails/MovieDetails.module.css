@@ -6,15 +6,22 @@
   }
   &>figcaption {
     margin-left: 3.75rem;
-    &>h2 {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      &>p {
-        margin: 0;
-        margin-right: .5rem;
-      }
-    }
   }
+}
 
+.title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  &>span:first-child {
+    margin-right: .5rem;
+  }
+}
+
+.rating {
+  margin-left: .5rem;
+}
+
+.label > * {
+  margin-right: 1rem;
 }

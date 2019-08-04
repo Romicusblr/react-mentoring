@@ -1,10 +1,7 @@
 /* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
-import MovieImg from '../MovieImg';
-import MovieTitle from '../MovieTitle';
 import LabelRaised from '../LabelRaised';
-import MovieOverview from '../MovieOverview';
 import MovieRating from '../MovieRating';
 import MovieGenre from '../MovieGenre';
 
@@ -17,16 +14,18 @@ function MovieDetails({
 }) {
   return (
     <figure className={style.movieDetails}>
-      <MovieImg src={poster_path} alt={title} />
+      <img src={poster_path} alt={title} />
       <figcaption>
-        <h2>
-          <MovieTitle title={title} />
+        <h1 className={style.title}>
+          <span>{title}</span>
           <MovieRating rating={vote_average} />
-        </h2>
+        </h1>
+        <p className={style.label}>
+          <LabelRaised>{new Date(release_date).getFullYear()}</LabelRaised>
+          <LabelRaised>{`${runtime} min`}</LabelRaised>
+        </p>
         <MovieGenre genres={genres} />
-        <LabelRaised>{new Date(release_date).getFullYear()}</LabelRaised>
-        <LabelRaised>{`${runtime} min`}</LabelRaised>
-        <MovieOverview text={overview} />
+        <p>{overview}</p>
       </figcaption>
     </figure>
   );
