@@ -1,6 +1,7 @@
 .movieDetails {
   margin: 0;
   display: flex;
+  opacity: .8;
   &>img {
     width: 17.5rem;
   }

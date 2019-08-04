@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import LabelRaised from '../LabelRaised';
-import MovieRating from '../MovieRating';
+import Rating from '../Rating';
 import MovieGenre from '../MovieGenre';
 
 import style from './MovieDetails.module.css';
@@ -18,7 +18,7 @@ function MovieDetails({
       <figcaption>
         <h1 className={style.title}>
           <span>{title}</span>
-          <MovieRating rating={vote_average} />
+          <Rating>{vote_average.toFixed(1)}</Rating>
         </h1>
         <p className={style.label}>
           <LabelRaised>{new Date(release_date).getFullYear()}</LabelRaised>
