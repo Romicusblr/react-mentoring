@@ -1,10 +1,8 @@
 /* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
-import MovieImg from '../MovieImg';
-import MovieTitle from '../MovieTitle';
-import MovieGenre from '../MovieGenre';
 import MovieYear from '../MovieYear';
+import List from '../List';
 
 import style from './MovieCard.module.css';
 
@@ -15,13 +13,13 @@ function MovieCard({
 }) {
   return (
     <figure className={style.movieCard}>
-      <MovieImg src={poster_path} alt={title} />
+      <img src={poster_path} alt={title} />
       <figcaption>
-        <div>
-          <MovieTitle title={title} />
+        <h3 className={style.title}>
+          {title}
           <MovieYear year={new Date(release_date).getFullYear()} />
-        </div>
-        <MovieGenre genres={genres} />
+        </h3>
+        <List genres={genres} visibleGenres={2} delimeter=" &amp; " />
       </figcaption>
     </figure>
   );
