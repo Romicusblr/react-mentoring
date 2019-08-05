@@ -7,11 +7,7 @@ function MovieYear({ year }) {
 }
 
 MovieYear.propTypes = {
-  year: PropTypes.number,
-};
-
-MovieYear.defaultProps = {
-  year: 0,
+  year: PropTypes.number.isRequired,
 };
 
 export default MovieYear;

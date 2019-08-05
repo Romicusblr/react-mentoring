@@ -17,11 +17,7 @@ const MainHeader = ({ quantity }) => (
 );
 
 MainHeader.propTypes = {
-  quantity: PropTypes.number,
-};
-
-MainHeader.defaultProps = {
-  quantity: 0,
+  quantity: PropTypes.number.isRequired,
 };
 
 export default MainHeader;

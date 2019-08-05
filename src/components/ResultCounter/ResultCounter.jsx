@@ -9,11 +9,7 @@ function ResultCounter({ quantity }) {
 }
 
 ResultCounter.propTypes = {
-  quantity: PropTypes.number,
-};
-
-ResultCounter.defaultProps = {
-  quantity: 0,
+  quantity: PropTypes.number.isRequired,
 };
 
 export default ResultCounter;

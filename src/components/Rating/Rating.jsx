@@ -7,11 +7,7 @@ function Rating({ children }) {
 }
 
 Rating.propTypes = {
-  children: PropTypes.node,
-};
-
-Rating.defaultProps = {
-  children: 0,
+  children: PropTypes.node.isRequired,
 };
 
 export default Rating;

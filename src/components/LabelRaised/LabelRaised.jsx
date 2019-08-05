@@ -9,11 +9,7 @@ function LabelRaised({ children }) {
 }
 
 LabelRaised.propTypes = {
-  children: PropTypes.node,
-};
-
-LabelRaised.defaultProps = {
-  children: '',
+  children: PropTypes.node.isRequired,
 };
 
 export default LabelRaised;
