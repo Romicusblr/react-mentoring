@@ -4,9 +4,9 @@ import MovieCard from '../MovieCard';
 import style from './SearchBody.module.css';
 
 const SearchBody = ({ data }) => (
-  <main className={style.searchBody}>
+  <div className={style.searchBody}>
     {data.map(movie => <MovieCard key={movie.id} movieData={movie} />)}
-  </main>
+  </div>
 );
 
 SearchBody.propTypes = {

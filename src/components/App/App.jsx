@@ -11,7 +11,7 @@ const App = () => (
   <React.Fragment>
     <ErrorBoundary>
       <Header />
-      <HeaderMovieDetails />
+      <HeaderMovieDetails movie={fakeData.data[0]} />
       <Main data={fakeData} />
       <Footer />
     </ErrorBoundary>
