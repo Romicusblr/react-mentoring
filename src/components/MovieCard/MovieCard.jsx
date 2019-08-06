@@ -19,7 +19,7 @@ function MovieCard({
           {title}
           <MovieYear year={new Date(release_date).getFullYear()} />
         </h3>
-        <List genres={genres} visibleGenres={2} delimeter=" &amp; " />
+        <List items={genres} limit={2} delimeter=" &amp; " />
       </figcaption>
     </figure>
   );

@@ -2,27 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from './List.module.css';
 
-function List({ genres, visibleGenres, delimeter }) {
-  const renderGenres = genres.slice(0, visibleGenres);
+function List({ items, limit, delimeter }) {
+  const renderItems = items.slice(0, limit);
   return (
     <ul className={style.list}>
       {delimeter
-        ? <li>{renderGenres.join(delimeter)}</li>
-        : renderGenres.map(genre => <li>{genre}</li>)}
+        ? <li>{renderItems.join(delimeter)}</li>
+        : renderItems.map(genre => <li>{genre}</li>)}
     </ul>
   );
 }
 
 List.propTypes = {
-  genres: PropTypes.arrayOf(PropTypes.string),
-  // eslint-disable-next-line react/require-default-props
-  visibleGenres: PropTypes.number,
+  items: PropTypes.arrayOf(PropTypes.string),
+  limit: PropTypes.number,
   delimeter: PropTypes.string,
 };
 
 List.defaultProps = {
-  genres: [],
+  items: [],
   delimeter: '',
+  limit: undefined,
 };
 
 export default List;

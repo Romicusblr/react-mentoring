@@ -24,7 +24,7 @@ function MovieDetails({
           <LabelRaised>{new Date(release_date).getFullYear()}</LabelRaised>
           <LabelRaised>{`${runtime} min`}</LabelRaised>
         </p>
-        <List genres={genres} visibleGenres={2} delimeter=" &amp; " />
+        <List items={genres} limit={2} delimeter=" &amp; " />
         <p>{overview}</p>
       </figcaption>
     </figure>
