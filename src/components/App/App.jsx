@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../Header';
-import HeaderMovieDetails from '../HeaderMovieDetails';
+// import HeaderMovieDetails from '../HeaderMovieDetails';
 import Main from '../Main';
 import Footer from '../Footer';
 import ErrorBoundary from '../ErrorBoundary';
@@ -11,7 +11,7 @@ const App = () => (
   <React.Fragment>
     <ErrorBoundary>
       <Header />
-      <HeaderMovieDetails movie={fakeData.data[0]} />
+      {/* <HeaderMovieDetails movie={fakeData.data[0]} /> */}
       <Main data={fakeData} />
       <Footer />
     </ErrorBoundary>

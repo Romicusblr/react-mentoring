@@ -1,0 +1,22 @@
+.radioButton {
+  &>input {
+    appearance: none;
+    &:checked + label {
+      background-color: var(--color-raised);
+    }
+  }
+
+  &>label {
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    background-color: var(--color-secondary);
+  }
+
+  &:first-of-type>label {
+    border-radius: .25rem 0 0 .25rem;
+  }
+
+  &:last-of-type>label {
+    border-radius: 0 .25rem .25rem 0 ;
+  }
+}

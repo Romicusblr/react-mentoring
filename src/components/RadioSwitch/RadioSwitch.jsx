@@ -1,36 +1,19 @@
-/* eslint-disable jsx-a11y/label-has-for */
 import React from 'react';
 import PropTypes from 'prop-types';
 import style from './RadioSwitch.module.css';
 
-function RadioSwitch({ name, title, options }) {
-  const buttons = options.map((option) => {
-    // FIXME: hardcoded id
-    const id = `${name}_${option.name}__${Math.random().toString().slice(2)}`;
-    return (
-      <p key={id}>
-        <input type="radio" name={name} id={id} defaultChecked={option.checked} />
-        <label htmlFor={id}>{option.name}</label>
-      </p>
-    );
-  });
+function RadioSwitch({ title, children, ...other }) {
   return (
-    <div className={style.radio}>
+    <div className={style.radioSwitch}>
       <span>{title}</span>
-      {buttons}
+      {React.Children.map(children, child => React.cloneElement(child, { ...other }))}
     </div>
   );
 }
-RadioSwitch.propTypes = {
-  name: PropTypes.string,
-  title: PropTypes.string,
-  options: PropTypes.arrayOf(PropTypes.objectOf),
-};
 
-RadioSwitch.defaultProps = {
-  name: '',
-  title: '',
-  options: [],
+RadioSwitch.propTypes = {
+  children: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default RadioSwitch;
