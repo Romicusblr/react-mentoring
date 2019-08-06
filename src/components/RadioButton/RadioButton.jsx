@@ -21,7 +21,7 @@ function RadioButton({
 
 RadioButton.propTypes = {
   value: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   defaultChecked: PropTypes.bool,
   className: PropTypes.string,
 };
@@ -29,6 +29,7 @@ RadioButton.propTypes = {
 RadioButton.defaultProps = {
   defaultChecked: false,
   className: '',
+  name: 'radio',
 };
 
 export default RadioButton;

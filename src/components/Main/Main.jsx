@@ -16,7 +16,10 @@ const Main = ({ data, className, ...other }) => (
 );
 
 Main.propTypes = {
-  data: PropTypes.objectOf(),
+  data: PropTypes.shape({
+    data: PropTypes.arrayOf(PropTypes.objectOf),
+    total: PropTypes.number,
+  }),
   className: PropTypes.string,
 };
 
