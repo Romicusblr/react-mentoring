@@ -1,22 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import SearchBody from '../SearchBody';
 import MainHeader from '../MainHeader';
 import style from './Main.module.css';
 
-const Main = ({ data }) => (
-  <main className={style.main}>
+const Main = ({ data, className, ...other }) => (
+  <main
+    className={classNames(style.main, className)}
+    {...other}
+  >
     <MainHeader quantity={data.total} />
-    <SearchBody data={data.data} />
+    <SearchBody movies={data.data} />
   </main>
 );
 
 Main.propTypes = {
   data: PropTypes.objectOf(),
+  className: PropTypes.string,
 };
 
 Main.defaultProps = {
   data: {},
+  className: '',
 };
 
 export default Main;

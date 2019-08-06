@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import LabelRaised from '../LabelRaised';
 import Rating from '../Rating';
 import List from '../List';
@@ -10,10 +11,13 @@ import style from './MovieDetails.module.css';
 function MovieDetails({
   movie: {
     title, genres, release_date, poster_path, overview, runtime, vote_average,
-  },
+  }, className, ...other
 }) {
   return (
-    <figure className={style.movieDetails}>
+    <figure
+      className={classNames(style.movieDetails, className)}
+      {...other}
+    >
       <img src={poster_path} alt={title} />
       <figcaption>
         <h1 className={style.title}>
@@ -41,10 +45,12 @@ MovieDetails.propTypes = {
     runtime: PropTypes.number,
     vote_average: PropTypes.number,
   }),
+  className: PropTypes.string,
 };
 
 MovieDetails.defaultProps = {
   movie: {},
+  className: '',
 };
 
 export default MovieDetails;

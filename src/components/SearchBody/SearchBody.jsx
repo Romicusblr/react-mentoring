@@ -1,19 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import MovieCard from '../MovieCard';
 import style from './SearchBody.module.css';
 
-const SearchBody = ({ data }) => (
-  <div className={style.searchBody}>
-    {data.map(movie => <MovieCard key={movie.id} movieData={movie} />)}
+const SearchBody = ({ movies, className, ...other }) => (
+  <div
+    className={classNames(style.searchBody, className)}
+    {...other}
+  >
+    {movies.map(movie => <MovieCard key={movie.id} movieData={movie} />)}
   </div>
 );
 
 SearchBody.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.objectOf),
+  movies: PropTypes.arrayOf(PropTypes.objectOf),
+  className: PropTypes.string,
 };
 
 SearchBody.defaultProps = {
-  data: [],
+  movies: [],
+  className: '',
 };
 export default SearchBody;
