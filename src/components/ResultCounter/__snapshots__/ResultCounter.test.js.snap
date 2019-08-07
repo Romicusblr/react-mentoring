@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultCounter should match to snapshot 1`] = `
+<b
+  className="resultCounter"
+>
+  undefined movie found
+</b>
+`;

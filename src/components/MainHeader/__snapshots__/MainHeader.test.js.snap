@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainHeader should match to snapshot 1`] = `
+<header
+  className="mainHeader"
+>
+  <ResultCounter
+    className=""
+  />
+  <RadioSwitch
+    className=""
+    name="sortFilter"
+    title="sort by"
+  >
+    <RadioButton
+      className=""
+      defaultChecked={true}
+      name="radio"
+      value="release date"
+    />
+    <RadioButton
+      className=""
+      defaultChecked={false}
+      name="radio"
+      value="rating"
+    />
+  </RadioSwitch>
+</header>
+`;

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderMovieDetails should match to snapshot 1`] = `
+<header
+  className="headerMovieDetails"
+>
+  <Logo
+    className=""
+  />
+  <MovieDetails
+    className=""
+    movie={Object {}}
+  />
+</header>
+`;

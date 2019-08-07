@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main should match to snapshot 1`] = `
+<main
+  className="main"
+>
+  <MainHeader
+    className=""
+  />
+  <SearchBody
+    className=""
+    movies={Array []}
+  />
+</main>
+`;

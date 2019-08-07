@@ -10,7 +10,7 @@ function Button({
   return (
     <button
       type={type}
-      className={classNames(style.button, className)}
+      className={classNames(style.buttonRaised, className)}
       {...other}
     >
       {children}

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieCard should match to snapshot 1`] = `
+<figure
+  className="movieCard"
+>
+  <img />
+  <figcaption>
+    <h3
+      className="title"
+    >
+      <MovieYear
+        className=""
+        year={NaN}
+      />
+    </h3>
+    <List
+      className=""
+      delimeter=" & "
+      items={Array []}
+      limit={2}
+    />
+  </figcaption>
+</figure>
+`;

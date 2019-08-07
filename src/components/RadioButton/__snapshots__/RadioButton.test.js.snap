@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioButton should match to snapshot 1`] = `
+<p
+  className="radioButton"
+>
+  <input
+    defaultChecked={false}
+    id="radio_undefined"
+    name="radio"
+    type="radio"
+  />
+  <label
+    htmlFor="radio_undefined"
+  />
+</p>
+`;

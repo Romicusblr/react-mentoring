@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should match to snapshot 1`] = `
+<header
+  className="header"
+>
+  <Logo
+    className=""
+  />
+  <h1>
+    find your movie
+  </h1>
+  <SearchBar
+    className=""
+  />
+</header>
+`;
