@@ -1,0 +1,11 @@
+.searchBar {
+  display: flex;
+  flex-direction: column;
+  &>p {
+    display: flex;
+    margin-top: 0;
+    &>input[type=text] {
+      flex-grow: 1;
+    }
+  }
+}

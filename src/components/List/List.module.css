@@ -1,0 +1,6 @@
+.list {
+  color: var(--color-text-secondary);
+  padding: 0;
+  margin: .5rem 0;
+  list-style-type: none;
+}

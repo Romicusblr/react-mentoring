@@ -1,0 +1,10 @@
+.button {
+  width: 235px;
+  padding: 1rem;
+  margin-left: .5rem;
+  background-color: var(--color-raised);
+  color: var(--color-white);
+  text-transform: uppercase;
+  border-radius: .25rem;
+  border-color: transparent
+}

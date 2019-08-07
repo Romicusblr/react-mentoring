@@ -1,0 +1,11 @@
+.rating {
+    --rating-size: 4rem;
+    width: var(--rating-size);
+    height: var(--rating-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-rating);
+    border: 1px solid var(--color-white);
+    border-radius: 50%;
+}

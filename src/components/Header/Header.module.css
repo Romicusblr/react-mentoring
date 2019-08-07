@@ -1,0 +1,19 @@
+.header {
+  position: relative;
+  padding: 5rem var(--padding-header);
+  display: flex;
+  flex-direction: column;
+  background-image: url('./bg.png');
+
+  &>h1 {
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+
+  &>h3 {
+    margin: 0;
+    position: absolute;
+    top: 1.5rem;
+    left: 4rem;
+  }
+}

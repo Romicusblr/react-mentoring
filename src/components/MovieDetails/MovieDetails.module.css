@@ -1,0 +1,28 @@
+.movieDetails {
+  margin: 0;
+  display: flex;
+  opacity: .8;
+  &>img {
+    width: 17.5rem;
+  }
+  &>figcaption {
+    margin-left: 3.75rem;
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  &>span:first-child {
+    margin-right: .5rem;
+  }
+}
+
+.rating {
+  margin-left: .5rem;
+}
+
+.label > * {
+  margin-right: 1rem;
+}

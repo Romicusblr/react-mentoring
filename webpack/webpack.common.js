@@ -22,6 +22,9 @@ module.exports = {
       chunkFilename: '[id].css',
     }),
   ],
+  resolve: {
+    extensions: ['.js', '.jsx', '.json'],
+  },
   module: {
     rules: [{
       test: /\.jsx?$/,
@@ -51,9 +54,12 @@ module.exports = {
       {
         loader: 'css-loader',
         options: {
-          modules: true,
+          modules: {
+            localIdentName: process.env.NODE_ENV === 'development' ? '[folder]__[local]' : '[local]__[hash:base64:5]',
+          },
         },
       },
+      'postcss-loader',
       ],
     },
     {
