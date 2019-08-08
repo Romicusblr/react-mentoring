@@ -6,12 +6,14 @@ exports[`RadioButton should match to snapshot 1`] = `
 >
   <input
     defaultChecked={false}
-    id="radio_undefined"
+    id="radio_value"
     name="radio"
     type="radio"
   />
   <label
-    htmlFor="radio_undefined"
-  />
+    htmlFor="radio_value"
+  >
+    value
+  </label>
 </p>
 `;

@@ -3,5 +3,7 @@
 exports[`LabelRaised should match to snapshot 1`] = `
 <span
   className="labelRaised"
-/>
+>
+  text
+</span>
 `;

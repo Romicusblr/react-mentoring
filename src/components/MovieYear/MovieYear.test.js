@@ -1,12 +1,8 @@
 import MovieYear from '.';
 
-fdescribe('MovieYear', () => {
-  it('should be selectable by class "movieYear"', () => {
-    expect(shallow(<MovieYear />).is('.movieYear')).toBe(true);
-  });
-
+describe('MovieYear', () => {
   it('should match to snapshot', () => {
-    const snap = shallow(<MovieYear />);
+    const snap = shallow(<MovieYear year={2000} />);
     expect(snap).toMatchSnapshot();
   });
 });

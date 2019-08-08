@@ -5,7 +5,7 @@ import Main from '../Main';
 import Footer from '../Footer';
 import ErrorBoundary from '../ErrorBoundary';
 import './App.css';
-import fakeData from '../fakeMovies';
+import fakeData from '../../../__mocks__/fakeMovies';
 
 const App = () => (
   <React.Fragment>

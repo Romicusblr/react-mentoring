@@ -1,12 +1,13 @@
 import RadioSwitch from '.';
+import RadioButton from '../RadioButton';
 
-fdescribe('RadioSwitch', () => {
-  it('should be selectable by class "radioSwitch"', () => {
-    expect(shallow(<RadioSwitch />).is('.radioSwitch')).toBe(true);
-  });
-
+describe('RadioSwitch', () => {
   it('should match to snapshot', () => {
-    const snap = shallow(<RadioSwitch />);
+    const snap = shallow(
+      <RadioSwitch title="radio">
+        <RadioButton value="value" />
+      </RadioSwitch>,
+    );
     expect(snap).toMatchSnapshot();
   });
 });

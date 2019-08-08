@@ -1,12 +1,8 @@
 import LabelRaised from '.';
 
-fdescribe('LabelRaised', () => {
-  it('should be selectable by class "labelRaised"', () => {
-    expect(shallow(<LabelRaised />).is('.labelRaised')).toBe(true);
-  });
-
+describe('LabelRaised', () => {
   it('should match to snapshot', () => {
-    const snap = shallow(<LabelRaised />);
+    const snap = shallow(<LabelRaised>text</LabelRaised>);
     expect(snap).toMatchSnapshot();
   });
 });

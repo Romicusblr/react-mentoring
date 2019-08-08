@@ -1,11 +1,11 @@
-import HeaderMovieDetails from '.';
+import MovieDetails from '.';
 import fakeMovies from '../../../__mocks__/fakeMovies';
 
 const { data: [fakeMovie] } = fakeMovies;
 
-describe('HeaderMovieDetails', () => {
+describe('MovieDetails', () => {
   it('should match to snapshot', () => {
-    const snap = shallow(<HeaderMovieDetails movie={fakeMovie} />);
+    const snap = shallow(<MovieDetails movie={fakeMovie} />);
     expect(snap).toMatchSnapshot();
   });
 });

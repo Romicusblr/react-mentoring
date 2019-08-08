@@ -1,12 +1,8 @@
 import ButtonRaised from '.';
 
-fdescribe('ButtonRaised', () => {
-  it('should be selectable by class "buttonRaised"', () => {
-    expect(shallow(<ButtonRaised />).is('.buttonRaised')).toBe(true);
-  });
-
+describe('ButtonRaised', () => {
   it('should match to snapshot', () => {
-    const snap = shallow(<ButtonRaised />);
+    const snap = shallow(<ButtonRaised>text</ButtonRaised>);
     expect(snap).toMatchSnapshot();
   });
 });

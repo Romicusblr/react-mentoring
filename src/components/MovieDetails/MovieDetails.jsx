@@ -8,11 +8,14 @@ import List from '../List';
 
 import style from './MovieDetails.module.css';
 
-function MovieDetails({
-  movie: {
-    title, genres, release_date, poster_path, overview, runtime, vote_average,
-  }, className, ...other
-}) {
+function MovieDetails({ movie, className, ...other }) {
+  if (!movie) return null;
+
+  const {
+    title, genres, release_date, vote_average,
+    poster_path, overview, runtime,
+  } = movie;
+
   return (
     <figure
       className={classNames(style.movieDetails, className)}
@@ -36,20 +39,12 @@ function MovieDetails({
 }
 
 MovieDetails.propTypes = {
-  movie: PropTypes.shape({
-    poster_path: PropTypes.string,
-    title: PropTypes.string,
-    genres: PropTypes.arrayOf(PropTypes.string),
-    release_date: PropTypes.string,
-    overview: PropTypes.string,
-    runtime: PropTypes.number,
-    vote_average: PropTypes.number,
-  }),
+  movie: PropTypes.objectOf(PropTypes.any),
   className: PropTypes.string,
 };
 
 MovieDetails.defaultProps = {
-  movie: {},
+  movie: null,
   className: '',
 };
 

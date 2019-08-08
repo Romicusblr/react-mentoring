@@ -3,5 +3,7 @@
 exports[`Rating should match to snapshot 1`] = `
 <span
   className="rating"
-/>
+>
+  7.0
+</span>
 `;

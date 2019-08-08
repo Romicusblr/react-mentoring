@@ -3,5 +3,7 @@
 exports[`MovieYear should match to snapshot 1`] = `
 <span
   className="movieYear"
-/>
+>
+  2000
+</span>
 `;

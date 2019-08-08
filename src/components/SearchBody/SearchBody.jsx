@@ -4,14 +4,18 @@ import classNames from 'classnames';
 import MovieCard from '../MovieCard';
 import style from './SearchBody.module.css';
 
-const SearchBody = ({ movies, className, ...other }) => (
-  <div
-    className={classNames(style.searchBody, className)}
-    {...other}
-  >
-    {movies.map(movie => <MovieCard key={movie.id} movieData={movie} />)}
-  </div>
-);
+function SearchBody({ movies, className, ...other }) {
+  if (!movies) return <h2>No items found</h2>;
+
+  return (
+    <div
+      className={classNames(style.searchBody, className)}
+      {...other}
+    >
+      {movies.map(movie => <MovieCard key={movie.id} movie={movie} />)}
+    </div>
+  );
+}
 
 SearchBody.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.objectOf),
@@ -19,7 +23,7 @@ SearchBody.propTypes = {
 };
 
 SearchBody.defaultProps = {
-  movies: [],
+  movies: null,
   className: '',
 };
 export default SearchBody;

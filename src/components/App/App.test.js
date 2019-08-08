@@ -1,8 +1,8 @@
-import Logo from '.';
+import App from '.';
 
-describe('Logo', () => {
+describe('App', () => {
   it('should match to snapshot', () => {
-    const snap = shallow(<Logo />);
+    const snap = shallow(<App />);
     expect(snap).toMatchSnapshot();
   });
 });

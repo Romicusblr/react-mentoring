@@ -1,12 +1,9 @@
 import Main from '.';
+import fakeMovies from '../../../__mocks__/fakeMovies';
 
-fdescribe('Main', () => {
-  it('should be selectable by class "main"', () => {
-    expect(shallow(<Main />).is('.main')).toBe(true);
-  });
-
+describe('Main', () => {
   it('should match to snapshot', () => {
-    const snap = shallow(<Main />);
+    const snap = shallow(<Main data={fakeMovies} />);
     expect(snap).toMatchSnapshot();
   });
 });

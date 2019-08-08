@@ -6,6 +6,7 @@ exports[`MainHeader should match to snapshot 1`] = `
 >
   <ResultCounter
     className=""
+    quantity={0}
   />
   <RadioSwitch
     className=""

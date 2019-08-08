@@ -6,7 +6,10 @@ import style from './List.module.css';
 function List({
   items, limit, delimeter, className, ...other
 }) {
+  if (!items) return null;
+
   const renderItems = items.slice(0, limit);
+
   return (
     <ul
       className={classNames(style.list, className)}
@@ -14,7 +17,7 @@ function List({
     >
       {delimeter
         ? <li>{renderItems.join(delimeter)}</li>
-        : renderItems.map(genre => <li>{genre}</li>)}
+        : renderItems.map(genre => <li key={genre}>{genre}</li>)}
     </ul>
   );
 }
@@ -27,7 +30,7 @@ List.propTypes = {
 };
 
 List.defaultProps = {
-  items: [],
+  items: null,
   delimeter: '',
   limit: undefined,
   className: '',

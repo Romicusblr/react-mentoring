@@ -4,6 +4,15 @@ exports[`RadioSwitch should match to snapshot 1`] = `
 <div
   className="radioSwitch"
 >
-  <span />
+  <span>
+    radio
+  </span>
+  <RadioButton
+    className=""
+    defaultChecked={false}
+    key=".0"
+    name="radio"
+    value="value"
+  />
 </div>
 `;

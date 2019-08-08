@@ -4,6 +4,6 @@ exports[`ResultCounter should match to snapshot 1`] = `
 <b
   className="resultCounter"
 >
-  undefined movie found
+  0 movie found
 </b>
 `;

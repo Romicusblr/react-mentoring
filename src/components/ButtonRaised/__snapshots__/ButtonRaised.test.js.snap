@@ -4,5 +4,7 @@ exports[`ButtonRaised should match to snapshot 1`] = `
 <button
   className="buttonRaised"
   type="submit"
-/>
+>
+  text
+</button>
 `;

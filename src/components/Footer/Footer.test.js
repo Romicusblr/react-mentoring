@@ -1,10 +1,6 @@
 import Footer from '.';
 
-fdescribe('Footer', () => {
-  it('should be selectable by class "footer"', () => {
-    expect(shallow(<Footer />).is('.footer')).toBe(true);
-  });
-
+describe('Footer', () => {
   it('should match to snapshot', () => {
     const snap = shallow(<Footer />);
     expect(snap).toMatchSnapshot();

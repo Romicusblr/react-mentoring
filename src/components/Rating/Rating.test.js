@@ -1,12 +1,8 @@
 import Rating from '.';
 
-fdescribe('Rating', () => {
-  it('should be selectable by class "rating"', () => {
-    expect(shallow(<Rating />).is('.rating')).toBe(true);
-  });
-
+describe('Rating', () => {
   it('should match to snapshot', () => {
-    const snap = shallow(<Rating />);
+    const snap = shallow(<Rating>7.0</Rating>);
     expect(snap).toMatchSnapshot();
   });
 });

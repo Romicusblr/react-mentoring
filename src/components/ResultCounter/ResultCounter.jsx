@@ -15,12 +15,13 @@ function ResultCounter({ quantity, className, ...other }) {
 }
 
 ResultCounter.propTypes = {
-  quantity: PropTypes.number.isRequired,
+  quantity: PropTypes.number,
   className: PropTypes.string,
 };
 
 ResultCounter.defaultProps = {
   className: '',
+  quantity: 0,
 };
 
 export default ResultCounter;
