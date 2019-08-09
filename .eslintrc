@@ -1,5 +1,6 @@
 {
   "extends": "airbnb",
+  "parser": "babel-eslint",
   "env": {
     "browser": true,
     "node": true,
@@ -11,9 +12,13 @@
     }],
     "react/jsx-filename-extension": [1, { "extensions": [".test.js", ".jsx"] }],
   },
-  "parser": "babel-eslint",
-  "globals": {
-    "shallow": true,
-    "React": true,
-}
+  "overrides": [
+    {
+      "files": ["*.test.js"],
+      "globals": {
+        "shallow": true,
+        "React": true
+      }
+    }
+  ]
 }

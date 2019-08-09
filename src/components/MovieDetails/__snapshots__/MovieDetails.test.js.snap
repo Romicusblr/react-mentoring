@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MovieDetails should match to snapshot 1`] = `
+exports[`MovieDetails should match to snapshot with data 1`] = `
 <figure
   className="movieDetails"
 >
@@ -54,3 +54,5 @@ exports[`MovieDetails should match to snapshot 1`] = `
   </figcaption>
 </figure>
 `;
+
+exports[`MovieDetails should match to snapshot without data 1`] = `""`;

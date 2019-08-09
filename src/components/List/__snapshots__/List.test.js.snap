@@ -2,6 +2,16 @@
 
 exports[`List should match to empty snapshot 1`] = `""`;
 
+exports[`List should match to snapshot with custom delimeter 1`] = `
+<ul
+  className="list"
+>
+  <li>
+    Adventure,Action
+  </li>
+</ul>
+`;
+
 exports[`List should match to snapshot with data 1`] = `
 <ul
   className="list"

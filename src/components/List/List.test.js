@@ -13,4 +13,9 @@ describe('List', () => {
     const snap = shallow(<List items={genres} limit={2} />);
     expect(snap).toMatchSnapshot();
   });
+
+  it('should match to snapshot with custom delimeter', () => {
+    const snap = shallow(<List items={genres} limit={2} delimeter="," />);
+    expect(snap).toMatchSnapshot();
+  });
 });
