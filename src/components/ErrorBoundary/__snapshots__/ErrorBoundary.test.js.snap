@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorBoundary should match to snapshot with error 1`] = `
+<h2>
+  Something went wrong.
+</h2>
+`;
+
+exports[`ErrorBoundary should match to snapshot without error 1`] = `<Something />`;

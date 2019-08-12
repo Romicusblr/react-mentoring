@@ -16,12 +16,11 @@ const HeaderMovieDetails = ({ movie, className, ...other }) => (
 );
 
 HeaderMovieDetails.propTypes = {
-  movie: PropTypes.objectOf(),
+  movie: PropTypes.objectOf(PropTypes.any).isRequired,
   className: PropTypes.string,
 };
 
 HeaderMovieDetails.defaultProps = {
-  movie: {},
   className: '',
 };
 

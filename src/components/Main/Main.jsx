@@ -19,12 +19,11 @@ Main.propTypes = {
   data: PropTypes.shape({
     data: PropTypes.arrayOf(PropTypes.objectOf),
     total: PropTypes.number,
-  }),
+  }).isRequired,
   className: PropTypes.string,
 };
 
 Main.defaultProps = {
-  data: {},
   className: '',
 };
 

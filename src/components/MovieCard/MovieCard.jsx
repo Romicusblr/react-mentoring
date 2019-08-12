@@ -7,10 +7,14 @@ import List from '../List';
 import style from './MovieCard.module.css';
 
 function MovieCard({
-  movieData: {
-    title, genres, release_date, poster_path,
-  }, className, ...other
+  movie, className, ...other
 }) {
+  if (!movie) return null;
+
+  const {
+    title, genres, release_date, poster_path,
+  } = movie;
+
   return (
     <figure
       className={classNames(style.movieCard, className)}
@@ -29,7 +33,7 @@ function MovieCard({
 }
 
 MovieCard.propTypes = {
-  movieData: PropTypes.shape({
+  movie: PropTypes.shape({
     poster_path: PropTypes.string,
     title: PropTypes.string,
     genres: PropTypes.arrayOf(PropTypes.string),
@@ -39,7 +43,7 @@ MovieCard.propTypes = {
 };
 
 MovieCard.defaultProps = {
-  movieData: {},
+  movie: null,
   className: '',
 };
 

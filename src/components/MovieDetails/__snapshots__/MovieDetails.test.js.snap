@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieDetails should match to snapshot with data 1`] = `
+<figure
+  className="movieDetails"
+>
+  <img
+    alt="Sherlock Holmes: A Game of Shadows"
+    src="https://image.tmdb.org/t/p/w500/7OFqsVuS6DlVM10GUD72vCGpQm9.jpg"
+  />
+  <figcaption>
+    <h1
+      className="title"
+    >
+      <span>
+        Sherlock Holmes: A Game of Shadows
+      </span>
+      <Rating
+        className=""
+      >
+        7.0
+      </Rating>
+    </h1>
+    <p
+      className="label"
+    >
+      <LabelRaised
+        className=""
+      >
+        2011
+      </LabelRaised>
+      <LabelRaised
+        className=""
+      >
+        129 min
+      </LabelRaised>
+    </p>
+    <List
+      className=""
+      delimeter=" & "
+      items={
+        Array [
+          "Adventure",
+          "Action",
+          "Crime",
+          "Mystery",
+        ]
+      }
+      limit={2}
+    />
+    <p>
+      There is a new criminal mastermind at large (Professor Moriarty) and not only is he Holmes’ intellectual equal, but his capacity for evil and lack of conscience may give him an advantage over the  detective.
+    </p>
+  </figcaption>
+</figure>
+`;
+
+exports[`MovieDetails should match to snapshot without data 1`] = `""`;

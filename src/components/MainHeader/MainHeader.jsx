@@ -20,12 +20,13 @@ const MainHeader = ({ quantity, className, ...other }) => (
 );
 
 MainHeader.propTypes = {
-  quantity: PropTypes.number.isRequired,
+  quantity: PropTypes.number,
   className: PropTypes.string,
 };
 
 MainHeader.defaultProps = {
   className: '',
+  quantity: 0,
 };
 
 export default MainHeader;

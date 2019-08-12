@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieCard should match to empty snapshot 1`] = `""`;
+
+exports[`MovieCard should match to snapshot with data 1`] = `
+<figure
+  className="movieCard"
+>
+  <img
+    alt="Sherlock Holmes: A Game of Shadows"
+    src="https://image.tmdb.org/t/p/w500/7OFqsVuS6DlVM10GUD72vCGpQm9.jpg"
+  />
+  <figcaption>
+    <h3
+      className="title"
+    >
+      Sherlock Holmes: A Game of Shadows
+      <MovieYear
+        className=""
+        year={2011}
+      />
+    </h3>
+    <List
+      className=""
+      delimeter=" & "
+      items={
+        Array [
+          "Adventure",
+          "Action",
+          "Crime",
+          "Mystery",
+        ]
+      }
+      limit={2}
+    />
+  </figcaption>
+</figure>
+`;

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioSwitch should match to snapshot 1`] = `
+<div
+  className="radioSwitch"
+>
+  <span>
+    radio
+  </span>
+  <RadioButton
+    className=""
+    defaultChecked={false}
+    key=".0"
+    name="radio"
+    value="value"
+  />
+</div>
+`;

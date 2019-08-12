@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar should match to snapshot 1`] = `
+<form
+  className="searchBar"
+>
+  <p>
+    <SearchInput
+      className=""
+      placeholder="type here"
+    />
+    <Button
+      className=""
+      type="submit"
+    >
+      search
+    </Button>
+  </p>
+  <RadioSwitch
+    className=""
+    name="searchFilter"
+    title="search by"
+  >
+    <RadioButton
+      className=""
+      defaultChecked={true}
+      name="radio"
+      value="title"
+    />
+    <RadioButton
+      className=""
+      defaultChecked={false}
+      name="radio"
+      value="genre"
+    />
+  </RadioSwitch>
+</form>
+`;
