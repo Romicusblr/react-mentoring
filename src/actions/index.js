@@ -28,9 +28,9 @@ const movieError = error => ({
   payload: error,
 });
 
-const fetchMovies = () => params => (dispatch) => {
+const fetchMovies = dispatch => () => {
   dispatch(moviesRequested());
-  api.getMovies(params)
+  api.getMovies()
     .then(data => dispatch(moviesLoaded(data)))
     .catch(err => dispatch(moviesError(err)));
 };
@@ -42,7 +42,7 @@ const fetchMovie = () => id => (dispatch) => {
     .catch(err => dispatch(movieError(err)));
 };
 
-export default {
+export {
   fetchMovies,
   fetchMovie,
 };

@@ -7,7 +7,6 @@ export default (state, action) => {
       error: null,
     };
   }
-
   switch (action.type) {
     case 'FETCH_MOVIES_REQUEST':
       return {
@@ -56,6 +55,6 @@ export default (state, action) => {
         error: action.payload,
       };
     default:
-      return state.bookList;
+      return state;
   }
 };
