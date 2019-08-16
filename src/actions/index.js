@@ -28,14 +28,14 @@ const movieError = error => ({
   payload: error,
 });
 
-const fetchMovies = dispatch => () => {
+const fetchMovies = params => (dispatch) => {
   dispatch(moviesRequested());
-  api.getMovies()
+  api.getMovies(params)
     .then(data => dispatch(moviesLoaded(data)))
     .catch(err => dispatch(moviesError(err)));
 };
 
-const fetchMovie = () => id => (dispatch) => {
+const fetchMovie = id => (dispatch) => {
   dispatch(movieRequested());
   api.getMovie(id)
     .then(data => dispatch(movieLoaded(data)))
