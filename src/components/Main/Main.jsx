@@ -4,16 +4,18 @@ import classNames from 'classnames';
 import SearchBody from '../SearchBody';
 import MainHeader from '../MainHeader';
 import style from './Main.module.css';
+import Spinner from '../Spinner';
 
 const Main = (props) => {
   const {
-    data, className, fetchMovies, ...other
+    data, className, fetchMovies, loading, ...other
   } = props;
 
   useEffect(() => {
     fetchMovies();
   }, []);
 
+  if (loading) return <Spinner />;
   if (!data) return null;
   return (
     <main
@@ -32,6 +34,7 @@ Main.propTypes = {
     total: PropTypes.number,
   }),
   className: PropTypes.string,
+  loading: PropTypes.bool.isRequired,
   fetchMovies: PropTypes.func.isRequired,
 };
 
