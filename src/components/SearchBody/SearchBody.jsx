@@ -4,7 +4,12 @@ import classNames from 'classnames';
 import MovieCard from '../MovieCard';
 import style from './SearchBody.module.css';
 
-function SearchBody({ movies, className, ...other }) {
+function SearchBody({
+  movies, loading, className, ...other
+}) {
+  if (loading) {
+    return '';
+  }
   if (!movies) return <h2>No items found</h2>;
 
   return (

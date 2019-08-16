@@ -7,9 +7,11 @@ import RadioSwitch from '../RadioSwitch';
 import RadioButton from '../RadioButton';
 import style from './SearchBar.module.css';
 
-const SearchBar = ({ className, ...other }) => (
+// useState
+const SearchBar = ({ className, onSearch, ...other }) => (
   <form
     className={classNames(style.searchBar, className)}
+    onSubmit={() => onSearch({ title: 'asdfasdf' })}
     {...other}
   >
     <p>

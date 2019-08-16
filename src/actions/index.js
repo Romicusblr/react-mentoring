@@ -35,7 +35,7 @@ const fetchMovies = dispatch => () => {
     .catch(err => dispatch(moviesError(err)));
 };
 
-const fetchMovie = () => id => (dispatch) => {
+const fetchMovie = dispatch => (id) => {
   dispatch(movieRequested());
   api.getMovie(id)
     .then(data => dispatch(movieLoaded(data)))

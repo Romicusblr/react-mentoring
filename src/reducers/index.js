@@ -1,17 +1,19 @@
-export default (state, action) => {
-  if (state === undefined) {
-    return {
-      movies: null,
-      currMovie: null,
-      loading: true,
-      error: null,
-    };
-  }
+const INITIAL_STATE = {
+  movies: {
+    data: [],
+    total: 0,
+  },
+  currMovie: null,
+  loading: true,
+  error: null,
+};
+
+export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case 'FETCH_MOVIES_REQUEST':
       return {
         ...state,
-        movies: [],
+        movies: INITIAL_STATE,
         loading: true,
         error: null,
       };
@@ -27,7 +29,7 @@ export default (state, action) => {
     case 'FETCH_MOVIES_FAILURE':
       return {
         ...state,
-        movies: [],
+        movies: INITIAL_STATE,
         loading: false,
         error: action.payload,
       };
