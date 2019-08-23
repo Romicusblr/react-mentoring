@@ -1,18 +1,14 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Header from './components/Header';
-// import HeaderMovieDetails from './components/HeaderMovieDetails';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
-import MainContainer from './components/Main/Main.container';
+import MainPage from './pages/MainPage';
+import MoviePage from './pages/MoviePage';
 
 const App = () => (
   <ErrorBoundary>
     <Router>
-      <Header />
-      {/* <HeaderMovieDetails movie={fakeData.data[0]} /> */}
-      <MainContainer />
-      <Footer />
+      <Route exact path="/" component={MainPage} />
+      <Route path="/film/:id" component={MoviePage} />
     </Router>
   </ErrorBoundary>
 
