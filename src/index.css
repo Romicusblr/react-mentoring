@@ -24,3 +24,8 @@ body {
 #root {
   box-shadow: 0px 0px 2rem 0px rgba(0,0,0,0.5);
 }
+
+.app {
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+}
+
