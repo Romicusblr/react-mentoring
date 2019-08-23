@@ -3,5 +3,6 @@
   padding: 1rem;
   background-color: #1D1D1DCC;
   border-radius: .25rem;
-  border-color: transparent
+  border-color: transparent;
+  color: var(--color-white);
 }
