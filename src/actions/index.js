@@ -15,16 +15,16 @@ const moviesError = error => ({
 });
 
 const movieRequested = () => ({
-  type: 'FETCH_MOVIE_REQUEST',
+  type: 'FETCH_CURR_MOVIE_REQUEST',
 });
 
 const movieLoaded = movie => ({
-  type: 'FETCH_MOVIE_SUCCESS',
+  type: 'FETCH_CURR_MOVIE_SUCCESS',
   payload: movie,
 });
 
 const movieError = error => ({
-  type: 'FETCH_MOVIE_FAILURE',
+  type: 'FETCH_CURR_MOVIE_FAILURE',
   payload: error,
 });
 

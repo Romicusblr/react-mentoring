@@ -35,7 +35,8 @@ exports[`Main should match to snapshot 1`] = `
     }
   }
 >
-  <Connect(MainContainer)
+  <Main
+    className=""
     data={
       Object {
         "data": Array [
