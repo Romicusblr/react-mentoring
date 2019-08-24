@@ -3,7 +3,6 @@ import { bindActionCreators } from 'redux';
 import { fetchMovies } from '../../actions';
 import Main from './Main';
 
-
 const mapStateToProps = state => ({
   data: state.movies,
   loading: state.loading,
