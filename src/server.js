@@ -1,5 +1,6 @@
 /* eslint-disable global-require */
 const express = require('express');
+const path = require('path');
 
 const app = express();
 const PORT = 8000;
@@ -14,6 +15,8 @@ if (process.env.NODE_ENV === 'development') {
 } else {
   app.use(express.static('build'));
 }
+
+app.get('*', (req, res) => res.sendFile(path.resolve('build', 'index.html')));
 
 const server = require('http').createServer(app);
 
