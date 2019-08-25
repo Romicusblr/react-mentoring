@@ -29,6 +29,7 @@ const SearchBar = ({ fetchMovies, className, ...other }) => {
       className={classNames(style.searchBar, className)}
       {...other}
     >
+      <h2>find your movie</h2>
       <p>
         <SearchInput value={state.search} onInput={handleChange} />
         <ButtonRaised>search</ButtonRaised>

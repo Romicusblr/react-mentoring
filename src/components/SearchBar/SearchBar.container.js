@@ -10,6 +10,4 @@ const mapDispatchToProps = dispatch => bindActionCreators({
   fetchMovies,
 }, dispatch);
 
-const SearchBarContainer = connect(mapStateToProps, mapDispatchToProps)(SearchBar);
-
-export default SearchBarContainer;
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);

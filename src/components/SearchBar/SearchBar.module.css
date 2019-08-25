@@ -1,6 +1,12 @@
 .searchBar {
   display: flex;
   flex-direction: column;
+  padding: var(--padding-header);
+  &>h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
   &>p {
     display: flex;
     margin-top: 0;
