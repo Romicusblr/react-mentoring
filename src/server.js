@@ -12,11 +12,13 @@ if (process.env.NODE_ENV === 'development') {
 
   app.use(require('webpack-dev-middleware')(compiler));
   app.use(require('webpack-hot-middleware')(compiler));
-} else {
-  app.use(express.static('build'));
 }
 
-app.get('*', (req, res) => res.sendFile(path.resolve('build', 'index.html')));
+app.use(express.static('build'));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve('build', 'index.html'));
+});
 
 const server = require('http').createServer(app);
 
