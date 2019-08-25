@@ -1,6 +1,6 @@
 const initialState = {
   data: null,
-  loading: true,
+  loading: false,
   error: null,
   total: 0,
   offset: 0,
@@ -26,6 +26,7 @@ export default (state = initialState, { type, payload }) => {
         offset,
         limit,
         data,
+        loading: false,
       };
     }
     case 'FETCH_MOVIES_FAILURE': {

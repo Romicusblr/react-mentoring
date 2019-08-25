@@ -8,7 +8,7 @@ export default {
       .then(res => res.json());
   },
   getMovie(id) {
-    return fetch(`${baseUrl}/movies?${id}`)
+    return fetch(`${baseUrl}/movies/${id}`)
       .then(res => res.json());
   },
 };

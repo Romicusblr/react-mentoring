@@ -1,13 +1,21 @@
 import React from 'react';
-import HeaderMovieDetails from '../../components/HeaderMovieDetails';
+import PropTypes from 'prop-types';
+import MovieDetails from '../../components/MovieDetails';
 
-const MoviePage = (props) => {
-  console.log(props);
+const MoviePage = ({ match }) => {
+  const { id } = match.params;
   return (
     <>
-      <HeaderMovieDetails />
+      <MovieDetails id={id} />
     </>
   );
+};
+
+MoviePage.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.objectOf(PropTypes.string),
+  }).isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default MoviePage;
