@@ -1,13 +1,9 @@
 import React from 'react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import MainContainer from '../../components/Main/Main.container';
+import SearchBarContainer from '../../components/SearchBar';
 
 const MainPage = () => (
   <>
-    <Header />
-    <MainContainer />
-    <Footer />
+    <SearchBarContainer />
   </>
 );
 

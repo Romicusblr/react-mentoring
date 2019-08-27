@@ -3,17 +3,17 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import Logo from '../Logo';
 import style from './Header.module.css';
-import SearchBarContainer from '../SearchBar/SearchBarContainer';
 
-const Header = ({ className, ...other }) => (
-  <header
+const Header = ({ className, children, ...other }) => (
+  <section
     className={classNames(style.header, className)}
     {...other}
   >
-    <Logo />
-    <h1>find your movie</h1>
-    <SearchBarContainer />
-  </header>
+    <header>
+      <Logo />
+    </header>
+    {children}
+  </section>
 );
 
 Header.propTypes = {
