@@ -39,7 +39,7 @@ const SearchBar = ({ fetchMovies, className, ...other }) => {
         title="search by"
       >
         <RadioButton onClick={() => setState(prevState => ({ ...prevState, ...{ searchBy: 'title' } }))} value="title" defaultChecked />
-        <RadioButton onClick={() => setState(prevState => ({ ...prevState, ...{ searchBy: 'genre' } }))} value="genre" />
+        <RadioButton onClick={() => setState(prevState => ({ ...prevState, ...{ searchBy: 'genres' } }))} value="genres" />
       </RadioSwitch>
     </form>
   );
