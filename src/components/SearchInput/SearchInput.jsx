@@ -4,11 +4,10 @@ import classNames from 'classnames';
 import style from './SearchInput.module.css';
 
 function SearchInput({
-  onInput, placeholder, className, ...other
+  placeholder, className, ...other
 }) {
   return (
     <input
-      onInput={onInput}
       type="text"
       placeholder={placeholder}
       className={classNames(style.input, className)}
@@ -20,7 +19,6 @@ function SearchInput({
 SearchInput.propTypes = {
   placeholder: PropTypes.string,
   className: PropTypes.string,
-  onInput: PropTypes.func.isRequired,
 };
 
 SearchInput.defaultProps = {

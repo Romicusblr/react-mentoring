@@ -9,7 +9,7 @@ import style from './SearchBar.module.css';
 
 const SearchBar = ({ fetchMovies, className, ...other }) => {
   const [state, setState] = useState({
-    search: null,
+    search: '',
     searchBy: 'title',
   });
 
@@ -18,9 +18,10 @@ const SearchBar = ({ fetchMovies, className, ...other }) => {
     event.preventDefault();
   };
 
-  const handleChange = (event) => {
-    setState(prevState => ({ ...prevState, ...{ search: event.target.value } }));
-    event.persist();
+  const handleChange = (e) => {
+    const { target: { name, value } } = e;
+    setState(prevState => ({ ...prevState, ...{ [name]: value } }));
+    e.stopPropagation();
   };
 
   return (
@@ -31,15 +32,17 @@ const SearchBar = ({ fetchMovies, className, ...other }) => {
     >
       <h2>find your movie</h2>
       <p>
-        <SearchInput value={state.search} onInput={handleChange} />
+        <SearchInput name="search" value={state.search} onChange={handleChange} />
         <ButtonRaised>search</ButtonRaised>
       </p>
       <RadioSwitch
-        name="searchFilter"
+        name="searchBy"
         title="search by"
+        switchValue="title"
+        onChange={handleChange}
       >
-        <RadioButton onClick={() => setState(prevState => ({ ...prevState, ...{ searchBy: 'title' } }))} value="title" defaultChecked />
-        <RadioButton onClick={() => setState(prevState => ({ ...prevState, ...{ searchBy: 'genres' } }))} value="genres" />
+        <RadioButton value="title" />
+        <RadioButton value="genres" />
       </RadioSwitch>
     </form>
   );

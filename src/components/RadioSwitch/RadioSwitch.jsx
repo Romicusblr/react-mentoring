@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import style from './RadioSwitch.module.css';
 
 function RadioSwitch({
-  title, children, className, ...other
+  title, children, className, switchValue, ...other
 }) {
   return (
     <div
@@ -12,7 +12,10 @@ function RadioSwitch({
       {...other}
     >
       <span>{title}</span>
-      {React.Children.map(children, child => React.cloneElement(child, { ...other }))}
+      {React.Children.map(children, (child) => {
+        const defaultChecked = switchValue === child.props.value;
+        return React.cloneElement(child, { defaultChecked, ...other });
+      })}
     </div>
   );
 }
@@ -21,6 +24,7 @@ RadioSwitch.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
   className: PropTypes.string,
+  switchValue: PropTypes.string.isRequired,
 };
 
 RadioSwitch.defaultProps = {
