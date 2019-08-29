@@ -13,9 +13,9 @@ const SearchBar = ({ fetchMovies, className, ...other }) => {
     searchBy: 'title',
   });
 
-  const fetch = (event) => {
+  const fetch = (e) => {
     fetchMovies(state);
-    event.preventDefault();
+    e.preventDefault();
   };
 
   const handleChange = (e) => {

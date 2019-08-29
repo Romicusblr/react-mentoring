@@ -6,10 +6,9 @@ import BackToMain from '../BackToMain';
 import Logo from '../Logo';
 import style from './Header.module.css';
 
-const Header = ({ className, children, ...other }) => (
+const Header = ({ className, children }) => (
   <section
     className={classNames(style.header, className)}
-    {...other}
   >
     <header>
       <Logo />
