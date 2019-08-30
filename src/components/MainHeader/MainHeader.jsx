@@ -6,18 +6,27 @@ import RadioSwitch from '../RadioSwitch';
 import RadioButton from '../RadioButton';
 import style from './MainHeader.module.css';
 
-const MainHeader = ({ quantity, className, ...other }) => (
-  <header
-    className={classNames(style.mainHeader, className)}
-    {...other}
-  >
-    <ResultCounter quantity={quantity} />
-    <RadioSwitch name="sortFilter" title="sort by">
-      <RadioButton value="release date" defaultChecked />
-      <RadioButton value="rating" />
-    </RadioSwitch>
-  </header>
-);
+const MainHeader = ({ quantity, className, ...other }) => {
+  const handleChange = () => {};
+
+  return (
+    <header
+      className={classNames(style.mainHeader, className)}
+      {...other}
+    >
+      <ResultCounter quantity={quantity} />
+      <RadioSwitch
+        name="sortFilter"
+        title="sort by"
+        switchValue="release date"
+        onChange={handleChange}
+      >
+        <RadioButton value="release date" />
+        <RadioButton value="rating" />
+      </RadioSwitch>
+    </header>
+  );
+};
 
 MainHeader.propTypes = {
   quantity: PropTypes.number,

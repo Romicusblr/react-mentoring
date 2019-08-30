@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { withRouter } from 'react-router-dom';
 import { fetchMovie } from '../../actions';
 import MovieDetails from './MovieDetails';
 
@@ -13,4 +12,4 @@ const mapDispatchToProps = dispatch => bindActionCreators({
   fetchMovie,
 }, dispatch);
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(MovieDetails));
+export default connect(mapStateToProps, mapDispatchToProps)(MovieDetails);
