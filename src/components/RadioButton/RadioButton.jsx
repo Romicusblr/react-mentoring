@@ -14,7 +14,7 @@ function RadioButton({
       {...other}
     >
       <input type="radio" name={name} id={radioId} defaultChecked={defaultChecked} value={value} />
-      <label htmlFor={radioId}>{value}</label>
+      <label htmlFor={radioId}>{value.replace('_', ' ')}</label>
     </p>
   );
 }
