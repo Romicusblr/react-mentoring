@@ -11,10 +11,10 @@ const MainHeader = ({
   history, quantity, className,
 }) => {
   const handleChange = (e) => {
-    const { target } = e;
-    const { location: { pathname, search } } = history;
+    const { target: { value } } = e;
+    const { location: { pathname, search } = {} } = history;
     const searchParams = new URLSearchParams(search);
-    searchParams.set('orderBy', target.value);
+    searchParams.set('orderBy', value);
     history.push(`${pathname}?${searchParams}`);
     e.stopPropagation();
   };

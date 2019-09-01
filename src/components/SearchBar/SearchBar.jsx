@@ -7,14 +7,24 @@ import RadioSwitch from '../RadioSwitch';
 import RadioButton from '../RadioButton';
 import style from './SearchBar.module.css';
 
-const SearchBar = ({ fetchMovies, className, ...other }) => {
+const SearchBar = ({
+  history, fetchMovies, className,
+}) => {
   const [state, setState] = useState({
     search: '',
     searchBy: 'title',
   });
 
   const fetch = (e) => {
-    fetchMovies(state);
+    const { location: { pathname, search } = {} } = history;
+    const searchParams = new URLSearchParams(search);
+    console.log('TCL: fetch -> history', history);
+    Object.keys(state).forEach((key) => {
+      searchParams.set(key, state[key]);
+    });
+    history.push(`${pathname}?${searchParams}`);
+
+    fetchMovies(search);
     e.preventDefault();
   };
 
@@ -28,7 +38,6 @@ const SearchBar = ({ fetchMovies, className, ...other }) => {
     <form
       onSubmit={fetch}
       className={classNames(style.searchBar, className)}
-      {...other}
     >
       <h2>find your movie</h2>
       <p>
@@ -51,6 +60,13 @@ const SearchBar = ({ fetchMovies, className, ...other }) => {
 SearchBar.propTypes = {
   className: PropTypes.string,
   fetchMovies: PropTypes.func.isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+    location: PropTypes.shape({
+      pathname: PropTypes.string.isRequired,
+      search: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
 };
 
 SearchBar.defaultProps = {
