@@ -1,5 +1,5 @@
 /* eslint-disable camelcase */
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import LabelRaised from '../LabelRaised';
@@ -11,12 +11,8 @@ import style from './MovieDetails.module.css';
 
 function MovieDetails(props) {
   const {
-    id, data, className, fetchMovie, loading, ...other
+    data, className, loading, ...other
   } = props;
-
-  useEffect(() => {
-    fetchMovie(id);
-  }, [id]);
 
   if (loading) return <Spinner />;
   if (!data) return null;
@@ -49,8 +45,6 @@ function MovieDetails(props) {
 }
 
 MovieDetails.propTypes = {
-  fetchMovie: PropTypes.func.isRequired,
-  id: PropTypes.number.isRequired,
   loading: PropTypes.bool,
   data: PropTypes.objectOf(PropTypes.any),
   className: PropTypes.string,

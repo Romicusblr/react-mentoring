@@ -1,1 +1,1 @@
-export { default } from './MovieDetails.container';
+export { default } from './MovieDetails';

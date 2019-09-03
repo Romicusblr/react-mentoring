@@ -1,9 +1,14 @@
 import React from 'react';
+import Layout from '../Layout';
+import Header from '../../components/Header';
 import SearchBarContainer from '../../components/SearchBar';
 
 const MainPage = () => (
   <>
-    <SearchBarContainer />
+    <Header>
+      <SearchBarContainer />
+    </Header>
+    <Layout />
   </>
 );
 

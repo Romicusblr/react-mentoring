@@ -16,12 +16,12 @@ const SearchBar = ({
   });
 
   const fetch = (e) => {
-    const { location: { pathname, search } = {} } = history;
+    const { location: { search } = {} } = history;
     const searchParams = new URLSearchParams(search);
     Object.keys(state).forEach((key) => {
       searchParams.set(key, state[key]);
     });
-    history.push(`${pathname}?${searchParams}`);
+    history.push(`/search/${searchParams}`);
 
     fetchMovies(search);
     e.preventDefault();
@@ -62,7 +62,6 @@ SearchBar.propTypes = {
   history: PropTypes.shape({
     push: PropTypes.func.isRequired,
     location: PropTypes.shape({
-      pathname: PropTypes.string.isRequired,
       search: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,

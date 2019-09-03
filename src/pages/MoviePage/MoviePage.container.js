@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchMovie } from '../../actions';
-import MovieDetails from './MovieDetails';
+import MoviePage from './MoviePage';
 
 const mapStateToProps = ({ currMovie }) => ({
   data: currMovie.data,
@@ -12,4 +12,4 @@ const mapDispatchToProps = dispatch => bindActionCreators({
   fetchMovie,
 }, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(MovieDetails);
+export default connect(mapStateToProps, mapDispatchToProps)(MoviePage);
