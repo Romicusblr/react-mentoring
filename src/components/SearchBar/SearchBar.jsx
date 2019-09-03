@@ -8,23 +8,20 @@ import RadioButton from '../RadioButton';
 import style from './SearchBar.module.css';
 
 const SearchBar = ({
-  history, fetchMovies, className,
+  history, className,
 }) => {
+  const { location: { search } = {} } = history;
+  const searchParams = new URLSearchParams(search);
+
   const [state, setState] = useState({
-    search: '',
-    searchBy: 'title',
+    search: searchParams.get('search'),
+    searchBy: searchParams.get('searchBy') || 'title',
   });
 
   const fetch = (e) => {
-    const { location: { search } = {} } = history;
-    const searchParams = new URLSearchParams(search);
-    Object.keys(state).forEach((key) => {
-      searchParams.set(key, state[key]);
-    });
-    history.push(`/search/${searchParams}`);
-
-    fetchMovies(search);
     e.preventDefault();
+    const params = new URLSearchParams(state);
+    history.push(`/search/?${params}`);
   };
 
   const handleChange = (e) => {
@@ -46,7 +43,7 @@ const SearchBar = ({
       <RadioSwitch
         name="searchBy"
         title="search by"
-        switchValue="title"
+        switchValue={state.searchBy}
         onChange={handleChange}
       >
         <RadioButton value="title" />

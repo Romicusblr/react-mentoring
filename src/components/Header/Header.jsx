@@ -14,7 +14,7 @@ const Header = ({ className, children }) => (
       <Logo />
       <Switch>
         <Route path="/film/">
-          <Link to="/">
+          <Link to="/search">
             <BackToMain />
           </Link>
         </Route>

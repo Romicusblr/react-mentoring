@@ -8,22 +8,26 @@ import Spinner from '../Spinner';
 
 const Main = (props) => {
   const {
-    data, className, fetchMovies, loading, ...other
+    data, className, fetchMovies, history, loading, ...other
   } = props;
 
+  const { location: { search } } = history;
+
   useEffect(() => {
-    fetchMovies();
-  }, []);
+    console.log(search);
+    fetchMovies(search);
+  }, [search]);
 
   if (loading) return <Spinner />;
   if (!data) return null;
+
   return (
     <main
       className={classNames(style.main, className)}
       {...other}
     >
       <MainHeader quantity={data.total} />
-      <SearchBody movies={data.data} />
+      <SearchBody movies={data.data} filters={search} />
     </main>
   );
 };

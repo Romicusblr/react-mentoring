@@ -1,10 +1,9 @@
 import React from 'react';
 import Footer from '../../components/Footer';
-import Main from '../../components/Main';
 
-const Layout = () => (
+const Layout = ({ children }) => (
   <>
-    <Main />
+    {children}
     <Footer />
   </>
 );

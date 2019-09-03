@@ -8,7 +8,7 @@ import List from '../List';
 import style from './MovieCard.module.css';
 
 function MovieCard({
-  movie, className, ...other
+  movie, filters, className, ...other
 }) {
   if (!movie) return null;
 
@@ -17,7 +17,7 @@ function MovieCard({
   } = movie;
 
   return (
-    <Link to={`/film/${id}`}>
+    <Link to={`/film/${id}${filters}`}>
       <figure
         className={classNames(style.movieCard, className)}
         {...other}

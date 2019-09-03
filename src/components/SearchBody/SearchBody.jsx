@@ -4,7 +4,9 @@ import classNames from 'classnames';
 import MovieCard from '../MovieCard';
 import style from './SearchBody.module.css';
 
-function SearchBody({ movies, className, ...other }) {
+function SearchBody({
+  movies, filters, className, ...other
+}) {
   if (!movies) return <h2>No items found</h2>;
 
   return (
@@ -12,7 +14,7 @@ function SearchBody({ movies, className, ...other }) {
       className={classNames(style.searchBody, className)}
       {...other}
     >
-      {movies.map(movie => <MovieCard key={movie.id} movie={movie} />)}
+      {movies.map(movie => <MovieCard key={movie.id} movie={movie} filters={filters} />)}
     </div>
   );
 }
