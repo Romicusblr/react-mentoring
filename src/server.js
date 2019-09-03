@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === 'development') {
   app.use(require('webpack-hot-middleware')(compiler));
   app.use(devMiddleware(compiler, {
     noInfo: true,
-    publicPath: compiler.outputPath,
+    publicPath: compiler.publicPath,
   }));
 
   app.use('/*', (req, res, next) => {

@@ -18,7 +18,6 @@ const SearchBar = ({
   const fetch = (e) => {
     const { location: { pathname, search } = {} } = history;
     const searchParams = new URLSearchParams(search);
-    console.log('TCL: fetch -> history', history);
     Object.keys(state).forEach((key) => {
       searchParams.set(key, state[key]);
     });
