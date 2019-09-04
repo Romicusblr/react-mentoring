@@ -55,7 +55,6 @@ const SearchBar = ({
 
 SearchBar.propTypes = {
   className: PropTypes.string,
-  fetchMovies: PropTypes.func.isRequired,
   history: PropTypes.shape({
     push: PropTypes.func.isRequired,
     location: PropTypes.shape({
