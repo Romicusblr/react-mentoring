@@ -1,7 +1,11 @@
 .logo {
-  color: var(--color-raised);
-  font-weight: 100;
-  &>strong {
-    font-weight: 900;
+  outline: 0;
+  text-decoration:none;
+  &>h3 {
+    color: var(--color-raised);
+    font-weight: 100;
+    &>strong {
+      font-weight: 900;
+    }
   }
 }
