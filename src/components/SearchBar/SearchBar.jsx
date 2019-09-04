@@ -14,7 +14,7 @@ const SearchBar = ({
   const searchParams = new URLSearchParams(search);
 
   const [state, setState] = useState({
-    search: searchParams.get('search'),
+    search: searchParams.get('search') || '',
     searchBy: searchParams.get('searchBy') || 'title',
   });
 

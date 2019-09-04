@@ -1,6 +1,7 @@
 .mainHeader {
   display: flex;
+  height: 5rem;
   align-items: center;
   justify-content: space-between;
-  padding: .75rem var(--padding-header);
+  padding: 0 var(--padding-header);
 }

@@ -3,9 +3,10 @@ import { bindActionCreators } from 'redux';
 import { fetchMovie } from '../../actions';
 import MoviePage from './MoviePage';
 
-const mapStateToProps = ({ currMovie }) => ({
+const mapStateToProps = ({ currMovie, movies }) => ({
   data: currMovie.data,
   loading: currMovie.loading,
+  movies: movies.data,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({

@@ -11,7 +11,7 @@ import style from './MovieDetails.module.css';
 
 function MovieDetails(props) {
   const {
-    data, className, loading, ...other
+    data, className, loading,
   } = props;
 
   if (loading) return <Spinner />;
@@ -25,7 +25,6 @@ function MovieDetails(props) {
   return (
     <figure
       className={classNames(style.movieDetails, className)}
-      {...other}
     >
       <img src={poster_path} alt={title} />
       <figcaption>

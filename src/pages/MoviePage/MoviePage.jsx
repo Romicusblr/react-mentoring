@@ -4,7 +4,9 @@ import Header from '../../components/Header';
 import MovieDetails from '../../components/MovieDetails';
 import Main from '../../components/Main';
 
-const MoviePage = ({ match, fetchMovie, ...other }) => {
+const MoviePage = ({
+  match, fetchMovie, movies, ...other
+}) => {
   const { id } = match.params;
 
   useEffect(() => {
@@ -16,16 +18,17 @@ const MoviePage = ({ match, fetchMovie, ...other }) => {
       <Header>
         <MovieDetails id={id} {...other} />
       </Header>
-      <Main />
+      <Main data={movies} />
     </>
   );
 };
 
 MoviePage.propTypes = {
   match: PropTypes.shape({
-    params: PropTypes.objectOf(PropTypes.string),
+    params: PropTypes.shape({
+      id: PropTypes.string,
+    }),
   }).isRequired,
-  id: PropTypes.string.isRequired,
   fetchMovie: PropTypes.func.isRequired,
 };
 
