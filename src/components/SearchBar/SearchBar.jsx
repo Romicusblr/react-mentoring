@@ -20,8 +20,10 @@ const SearchBar = ({
 
   const fetch = (e) => {
     e.preventDefault();
-    const params = new URLSearchParams(state);
-    history.push(`/search/?${params}`);
+    Object.entries(state).forEach(([key, value]) => {
+      searchParams.set(key, value);
+    });
+    history.push(`/search/?${searchParams}`);
   };
 
   const handleChange = (e) => {

@@ -15,7 +15,6 @@ const Main = (props) => {
 
   useEffect(() => {
     fetchMovies(search);
-    console.log('TCL: Main -> search', search);
   }, [search]);
 
   if (loading) return <Spinner />;

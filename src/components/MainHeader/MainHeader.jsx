@@ -10,12 +10,13 @@ import style from './MainHeader.module.css';
 const MainHeader = ({
   history, quantity, className,
 }) => {
+  const { location: { search } = {} } = history;
+  const searchParams = new URLSearchParams(search);
+
   const handleChange = (e) => {
     const { target: { value } } = e;
-    const { location: { pathname, search } = {} } = history;
-    const searchParams = new URLSearchParams(search);
-    searchParams.set('orderBy', value);
-    history.push(`${pathname}?${searchParams}`);
+    searchParams.set('sortBy', value);
+    history.push(`/search/?${searchParams}`);
     e.stopPropagation();
   };
 
@@ -27,7 +28,7 @@ const MainHeader = ({
       <RadioSwitch
         name="sortFilter"
         title="sort by"
-        switchValue="release_date"
+        switchValue={searchParams.get('sortBy') || 'release_date'}
         onChange={handleChange}
       >
         <RadioButton value="release_date" />
