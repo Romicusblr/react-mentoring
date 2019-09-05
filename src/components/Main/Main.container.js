@@ -1,17 +1,16 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { withRouter } from 'react-router-dom';
 import { fetchMovies } from '../../actions';
 import Main from './Main';
 
-const mapStateToProps = state => ({
-  data: state.movies,
-  loading: state.loading,
+const mapStateToProps = ({ movies }) => ({
+  data: movies,
+  loading: movies.loading,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
   fetchMovies,
 }, dispatch);
 
-const MainContainer = connect(mapStateToProps, mapDispatchToProps)(Main);
-
-export default MainContainer;
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Main));

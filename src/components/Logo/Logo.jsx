@@ -1,17 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import style from './Logo.module.css';
 
 function Logo({ className, ...other }) {
   return (
-    <h3
+    <Link
+      to="/"
       className={classNames(style.logo, className)}
       {...other}
     >
-      <strong>netflix</strong>
+      <h3>
+        <strong>netflix</strong>
       roulette
-    </h3>
+      </h3>
+    </Link>
   );
 }
 

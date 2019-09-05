@@ -7,38 +7,49 @@ import RadioSwitch from '../RadioSwitch';
 import RadioButton from '../RadioButton';
 import style from './SearchBar.module.css';
 
-const SearchBar = ({ fetchMovies, className, ...other }) => {
+const SearchBar = ({
+  history, className,
+}) => {
+  const { location: { search } = {} } = history;
+  const searchParams = new URLSearchParams(search);
+
   const [state, setState] = useState({
-    search: null,
-    searchBy: 'title',
+    search: searchParams.get('search'),
+    searchBy: searchParams.get('searchBy') || 'title',
   });
 
-  const fetch = (event) => {
-    fetchMovies(state);
-    event.preventDefault();
+  const fetch = (e) => {
+    e.preventDefault();
+    Object.entries(state).forEach(([key, value]) => {
+      searchParams.set(key, value);
+    });
+    history.push(`/search/?${searchParams}`);
   };
 
-  const handleChange = (event) => {
-    setState(prevState => ({ ...prevState, ...{ search: event.target.value } }));
-    event.persist();
+  const handleChange = (e) => {
+    const { target: { name, value } } = e;
+    setState(prevState => ({ ...prevState, ...{ [name]: value } }));
+    e.stopPropagation();
   };
 
   return (
     <form
       onSubmit={fetch}
       className={classNames(style.searchBar, className)}
-      {...other}
     >
+      <h2>find your movie</h2>
       <p>
-        <SearchInput value={state.search} onInput={handleChange} />
+        <SearchInput name="search" value={state.search} onChange={handleChange} />
         <ButtonRaised>search</ButtonRaised>
       </p>
       <RadioSwitch
-        name="searchFilter"
+        name="searchBy"
         title="search by"
+        switchValue={state.searchBy}
+        onChange={handleChange}
       >
-        <RadioButton onClick={() => setState(prevState => ({ ...prevState, ...{ searchBy: 'title' } }))} value="title" defaultChecked />
-        <RadioButton onClick={() => setState(prevState => ({ ...prevState, ...{ searchBy: 'genre' } }))} value="genre" />
+        <RadioButton value="title" />
+        <RadioButton value="genres" />
       </RadioSwitch>
     </form>
   );
@@ -46,7 +57,12 @@ const SearchBar = ({ fetchMovies, className, ...other }) => {
 
 SearchBar.propTypes = {
   className: PropTypes.string,
-  fetchMovies: PropTypes.func.isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+    location: PropTypes.shape({
+      search: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
 };
 
 SearchBar.defaultProps = {

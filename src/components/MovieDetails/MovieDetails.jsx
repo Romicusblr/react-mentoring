@@ -4,17 +4,23 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import LabelRaised from '../LabelRaised';
 import Rating from '../Rating';
+import Spinner from '../Spinner';
 import List from '../List';
 
 import style from './MovieDetails.module.css';
 
-function MovieDetails({ movie, className, ...other }) {
-  if (!movie) return null;
+function MovieDetails(props) {
+  const {
+    data, className, loading, ...other
+  } = props;
+
+  if (loading) return <Spinner />;
+  if (!data) return null;
 
   const {
     title, genres, release_date, vote_average,
     poster_path, overview, runtime,
-  } = movie;
+  } = data;
 
   return (
     <figure
@@ -39,12 +45,14 @@ function MovieDetails({ movie, className, ...other }) {
 }
 
 MovieDetails.propTypes = {
-  movie: PropTypes.objectOf(PropTypes.any),
+  loading: PropTypes.bool,
+  data: PropTypes.objectOf(PropTypes.any),
   className: PropTypes.string,
 };
 
 MovieDetails.defaultProps = {
-  movie: null,
+  data: null,
+  loading: false,
   className: '',
 };
 

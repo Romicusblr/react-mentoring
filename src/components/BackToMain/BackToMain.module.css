@@ -1,0 +1,8 @@
+.back {
+  --img-size: 1.5rem;
+  background-image: url('./search.png');
+  width: var(--img-size);
+  height: var(--img-size);
+  background-size: var(--img-size) var(--img-size);
+  transform: scaleX(-1);
+}

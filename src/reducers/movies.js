@@ -26,6 +26,7 @@ export default (state = initialState, { type, payload }) => {
         offset,
         limit,
         data,
+        loading: false,
       };
     }
     case 'FETCH_MOVIES_FAILURE': {
