@@ -14,6 +14,7 @@
   "author": "Raman Mastyka",
   "main": "src/index.jsx",
   "scripts": {
+    "next": "next",
     "build": "webpack --config webpack/webpack.production.js",
     "start": "NODE_ENV=development nodemon -w src/server.js src/server.js",
     "prod": "NODE_ENV=production node src/server.js",
@@ -26,8 +27,11 @@
     }
   },
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
     "classnames": "^2.2.6",
     "express": "^4.17.1",
+    "next": "^9.0.5",
+    "nextjs-redirect": "^1.0.2",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -46,7 +50,6 @@
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^3.0.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "eslint": "^5.16.0",

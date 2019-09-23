@@ -4,13 +4,16 @@
   "env": {
     "browser": true,
     "node": true,
-    "jest": true,
+    "jest": true
+  },
+  "globals": {
+    "React": true
   },
   "rules": {
     "import/no-extraneous-dependencies": ["error", {
-      "devDependencies": true,
+      "devDependencies": true
     }],
-    "react/jsx-filename-extension": [1, { "extensions": [".test.js", ".jsx"] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".test.js", ".jsx"] }]
   },
   "overrides": [
     {

@@ -1,0 +1,31 @@
+@import "~normalize.css";
+
+:root {
+  --color-raised: #F65261;
+  --color-text-main: var(--color-white);
+  --color-text-secondary: #BDBDBD;
+  --color-text-other: #919191;
+  --color-white: #FFF;
+  --color-primary: #232323;
+  --color-secondary: #424242;
+  --color-rating: #A1E66F;
+  --color-bg: #555;
+  --padding-header: 3.75rem;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  font-size: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#root {
+  box-shadow: 0px 0px 2rem 0px rgba(0,0,0,0.5);
+}
+
+.app {
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+}
+
