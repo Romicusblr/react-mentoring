@@ -1,5 +1,3 @@
-const Index = () => (
-  <h1>next app</h1>
-);
+import redirect from 'nextjs-redirect';
 
-export default Index;
+export default redirect('/search');
